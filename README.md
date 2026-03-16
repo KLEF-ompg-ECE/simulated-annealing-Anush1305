@@ -22,25 +22,24 @@ Open `sa_timetable.py` and read through it. Then answer these questions.
 
 **Q1. What does `count_clashes()` measure? What value means a perfect timetable?**
 
-```
+
 `count_clashes()` measures the total number of exam conflicts for all students, where a conflict means a student has two exams scheduled in the same time slot. A value of 0 means a perfect timetable with no clashes.
-```
+
 
 **Q2. What does `generate_neighbor()` do? How is the new timetable different from the current one?**
 
-```
+
 `generate_neighbor()` creates a new timetable by moving one randomly chosen exam to a different slot. The new timetable differs from the current one by only one exam's slot assignment, allowing small changes for exploration.
-```
+
 
 **Q3. In `run_sa()`, there is this line:**
-```python
+
 if delta < 0 or random.random() < math.exp(-delta / T):
-```
+
 **What does this line decide? Why does SA sometimes accept a worse solution?**
 
-```
 This line decides whether to accept the new timetable. It always accepts improvements (when delta < 0), but sometimes accepts worse solutions based on the temperature and probability. This helps the algorithm escape local minima and explore more possibilities, which is essential for finding better solutions in complex optimization problems.
-```
+
 
 ---
 
@@ -114,9 +113,9 @@ Simulated Annealing is effective for solving scheduling problems by allowing occ
 
 ## Submission Checklist
 
-- [ ] Student name and ID filled in
-- [ ] Q1, Q2, Q3 answered
-- [ ] Experiment 1: table filled, timetable pasted, plot observation written
-- [ ] Experiment 2: results table filled (3 rows), observation and answer written
-- [ ] Summary table completed and reflection written
-- [ ] `plots/` contains: `experiment_1.png`, `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`
+ - [x] Student name and ID filled in
+ - [x] Q1, Q2, Q3 answered
+ - [x] Experiment 1: table filled, timetable pasted, plot observation written
+ - [x] Experiment 2: results table filled (3 rows), observation and answer written
+ - [x] Summary table completed and reflection written
+-  [x] `plots/` contains: `experiment_1.png`, `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`
