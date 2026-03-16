@@ -74,7 +74,9 @@ python sa_timetable.py
 ```
 
 **Look at `plots/experiment_1.png` and describe what you see (2–3 sentences).**
+```
 The plot shows a rapid drop in clashes at the beginning, followed by a gradual flattening as the algorithm converges. The biggest drop happens in the early iterations, and the curve becomes nearly flat as it approaches the best solution found.
+```
 ---
 
 ## Experiment 2 — Effect of Cooling Rate
@@ -91,10 +93,14 @@ Save plots as `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`.
 | 0.995       | 3             | 1379                 | No                 |
 
 **Compare the three plots. What do you notice about how fast vs slow cooling affects the result?**
+```
 With fast cooling (0.80), the temperature drops quickly and the algorithm stops early, resulting in a higher number of clashes. Slower cooling rates (0.95 and 0.995) allow more iterations and better exploration, leading to fewer clashes. The slowest cooling rate (0.995) takes the longest but achieves the same best result as 0.95, showing that thorough search improves solution quality.
+```
 
 **Which cooling_rate gave the best result? Why do you think that is?**
+```
 Both 0.95 and 0.995 gave the best result of 3 clashes, but 0.995 required more iterations. The best result comes from slower cooling because it allows the algorithm to explore more solutions and avoid getting stuck in poor local minima.
+```
 ---
 
 ## Summary
@@ -108,7 +114,9 @@ Both 0.95 and 0.995 gave the best result of 3 clashes, but 0.995 required more i
 | 2 — Cooling rate | cooling_rate = 0.95 | 3 | Moderate cooling balances speed and solution quality. |
 
 **In your own words — what is the most important thing you learned about Simulated Annealing from these experiments?**
+```
 Simulated Annealing is effective for solving scheduling problems by allowing occasional acceptance of worse solutions to escape local minima. The cooling rate is crucial: fast cooling leads to quick but suboptimal results, while slow cooling improves solution quality at the cost of more computation. The most important lesson is that patience and thorough exploration are key to finding better solutions in complex optimization problems.
+```
 ---
 
 ## Submission Checklist
